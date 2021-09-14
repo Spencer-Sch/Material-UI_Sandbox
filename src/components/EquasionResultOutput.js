@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: `inset 0px 12px 8px -10px ${grey[600]}, inset 0px -16px 8px -10px ${grey[600]}, inset 12px 0px 8px -10px ${grey[600]}, inset -16px 0px 8px -10px ${grey[600]}`,
   },
   typography: {
-    color: red['A700'],
+    // color: red['A700'],
+    fontWeight: 900,
     paddingRight: 12,
   },
 }));

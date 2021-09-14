@@ -1,7 +1,7 @@
 import { Button, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 import React from 'react';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   buttonStyles: {
     minWidth: '100%',
     height: '100%',
@@ -9,9 +9,13 @@ const useStyles = makeStyles({
   paper: {
     height: '100%',
   },
-});
+  typography: {
+    fontSize: '2rem',
+    fontWeight: 900,
+  },
+}));
 
-const CalculatorButton = () => {
+const CalculatorButton = (props) => {
   const classes = useStyles();
 
   return (
@@ -22,7 +26,9 @@ const CalculatorButton = () => {
           variant="contained"
           color="primary"
         >
-          <Typography variant="h5">1</Typography>
+          <Typography variant="h5" className={classes.typography}>
+            {props.icon}
+          </Typography>
         </Button>
       </Paper>
     </Grid>

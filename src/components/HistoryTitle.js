@@ -3,7 +3,7 @@ import React from 'react';
 
 const useStyles = makeStyles({
   grid: {
-    height: '9%',
+    height: '10%',
   },
   typography: {
     marginBottom: 0,

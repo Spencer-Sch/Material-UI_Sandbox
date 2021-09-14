@@ -1,6 +1,8 @@
-import { Button, Grid, makeStyles, Paper } from '@material-ui/core';
+import { Grid, makeStyles } from '@material-ui/core';
 import React from 'react';
 import CalculatorButton from './CalculatorButton';
+
+import { buttonMap } from '../constants/constants.js';
 
 const useStyles = makeStyles({
   buttonAreaStyles: {
@@ -9,7 +11,12 @@ const useStyles = makeStyles({
 });
 
 const CalculatorButtonArea = () => {
+  const createButtons = buttonMap.map((button) => (
+    <CalculatorButton key={button.id} icon={button.icon} />
+  ));
+
   const classes = useStyles();
+
   return (
     <Grid
       container
@@ -18,26 +25,7 @@ const CalculatorButtonArea = () => {
       xs={12}
       className={classes.buttonAreaStyles}
     >
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
-      <CalculatorButton />
+      {createButtons}
     </Grid>
   );
 };

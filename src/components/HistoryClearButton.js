@@ -3,9 +3,14 @@ import React from 'react';
 
 const useStyles = makeStyles({
   grid: {
-    height: '5%',
+    height: '6%',
     display: 'flex',
     alignItems: 'center',
+  },
+  button: {
+    letterSpacing: 2.5,
+    fontWeight: 700,
+    fontSize: '1.2rem',
   },
 });
 
@@ -14,7 +19,12 @@ const HistoryClearButton = () => {
 
   return (
     <Grid item xs={12} className={classes.grid}>
-      <Button variant="contained" color="secondary" fullWidth>
+      <Button
+        variant="contained"
+        color="secondary"
+        fullWidth
+        className={classes.button}
+      >
         Clear History
       </Button>
     </Grid>
