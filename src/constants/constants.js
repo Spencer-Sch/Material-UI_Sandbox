@@ -30,10 +30,7 @@ export const buttonMap = [
   { id: 18, icon: '2' },
   { id: 19, icon: '3' },
   { id: 20, icon: <FontAwesomeIcon icon={faPlus} /> },
-  {
-    id: 21,
-    icon: '+/-',
-  },
+  { id: 21, icon: '+/-' },
   { id: 22, icon: '0' },
   { id: 23, icon: '.' },
   { id: 24, icon: <FontAwesomeIcon icon={faEquals} /> },
